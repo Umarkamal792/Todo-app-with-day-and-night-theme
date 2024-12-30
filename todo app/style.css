@@ -1,0 +1,147 @@
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    color: #000000;
+    transition: background-color 1.5s, color 1.5s;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: double;
+    width: 750px;
+    height: 500px;
+    border: 5px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px #969696;
+    padding: 20px;
+}
+
+.header h1 {
+    text-align: center;
+    font-size: 88px;
+    margin: 0;
+    font-family: initial;
+}
+
+hr {
+    width: 100%;
+    border: 1px solid #000;
+    margin: 20px 0;
+}
+
+.buttons {
+    width: 100%;
+    text-align: center;
+}
+
+.buttons button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 1px solid #000;
+    background: #00184f;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.buttons button:hover {
+    background: #101010;
+}
+
+.toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 25px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 25px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 5px;
+    bottom: 2.5px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:checked+.slider:before {
+    transform: translateX(15px);
+}
+
+
+@media (max-width: 768px) {
+    #container {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .header h1 {
+        font-size: 50px;
+    }
+
+    .buttons button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .switch {
+        width: 40px;
+        height: 20px;
+    }
+
+    .slider:before {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 30px;
+    }
+
+    .buttons button {
+        font-size: 12px;
+    }
+}

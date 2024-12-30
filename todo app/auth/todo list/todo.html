@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <h1 class="navbar-heading">Todo App</h1>
+        <div class="toggle">
+            <img onclick="showUserInfo()" src="../../image/9187604.png" alt="">
+            <label class="switch">
+                <input type="checkbox" id="toggleTheme" onchange="toggleTheme()">
+                <span class="slider round"></span>
+            </label>
+            <span id="toggleLabel">🌞 Light Mode</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="h1">Todo List</h1>
+        <form class="form2" id="todo-form">
+            <input class="input1" type="text" id="todo-input" placeholder="Enter a todo">
+            <button type="submit">Add Todo</button>
+        </form>
+        <ul id="todo-list"></ul>
+        <button  id="clear-todos" onclick="clearAllTodos()">Clear All</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
